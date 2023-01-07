@@ -1,0 +1,465 @@
+/* Archivo para añadir nuestros estilos */
+
+body {
+    font-family: sans-serif; /* definimos una tipografía por defecto */
+    margin: 0 auto; /* propiedad que centra la página */
+    /* definimos un máximo de ancho para la página el max width pero lo quitamos para disponer de todo el ancho y ya */
+    overflow-x: hidden;
+}
+
+header{
+    background: linear-gradient(90deg,var(--primary-blue,#073590),var(--medium-blue,#0d49c0));
+    color: white;
+}
+
+main{
+    background: var(--bg-grey,#f4f4f4);
+}
+
+
+.logo{
+    padding: 0.5rem;
+}
+
+.nav1{
+    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-align: right;
+}
+
+.fa-angle-down{
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+
+}
+    
+
+.nav1 a{
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+   
+  
+}
+
+.navlinks{
+   margin-left: 17rem;
+    transition: transform .5s;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    
+ 
+}
+
+.navitem{
+    list-style: none;
+    
+    
+    z-index: 2;
+    
+    
+    --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+
+    
+}
+
+.navlink--inside{
+display: flex;
+list-style: none;
+
+
+}
+
+.navlink--inside{
+    background-color: #ffffff;
+    color: rgb(36, 61, 204);
+    display: flex;
+    z-index: 2;
+    position: relative; 
+}
+
+
+
+.navitem:hover{
+    --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%); 
+    --transform:rotate(0);
+
+    
+}
+
+
+.navnesting{
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: absolute;
+    
+   
+    transform: translate(100%);
+
+  
+    
+}
+
+.fa-angle-down{
+    transform: var(--transform);
+    transition: transform .3s;
+    display: block;
+}
+
+
+form{
+    padding: 1rem;
+    font-size: bold;
+    margin-right: 0.5rem;
+
+}
+
+.form1 a{
+    padding: 1rem;
+    margin-right: 0.5rem;  
+    color: var(--light-base,#fff);
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.form1 a:hover{
+    font-weight: 700;
+    opacity: 1;
+}
+
+.fa-plane, .fa-camera, .fa-bed, .fa-car{
+    margin-right: 0.5rem;
+}
+
+.form2{
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+
+.form2 a{
+    margin-right: 1rem;
+}
+
+.form2 span{
+    margin-right: 0.5px;
+}
+
+.form3{
+    padding: 0.5rem;
+}
+
+
+
+.fa-avianex{
+    margin-right: 0.5rem;
+    color:#cf2e1d; 
+    size: 2rem;
+
+}
+
+.importante{
+    display: inline;
+    color:var(--very-dark-grey,#2e2e2e);
+    font-weight: 700;
+    margin-top: -1rem;
+}
+
+.leermas{
+    color:#1460b4;
+    text-decoration: underline;
+    margin-left: 1rem;
+}
+
+.imp{
+    padding-top: 2rem;  
+    padding-bottom: 2rem;
+    letter-spacing: .1px;
+}
+
+.recuadroimp{
+    background-color: rgb(255, 255, 255);
+    margin: 0.5px;
+    padding: 1rem;
+    border-radius: 20px;
+    }
+
+
+.fa-envelope {
+    position: fixed;
+    bottom: 10rem;
+    right: 1rem;
+    width: 32px;
+    z-index: 1;
+    color: #073590;
+    
+    
+}
+
+
+.fa-plane{
+    transform: rotate(320deg);
+    text-align: center;
+}
+
+input.custom-radio{
+    display: none;
+  }
+
+input.custom-radio + label:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    margin-bottom: 3px;
+  }
+  
+  input:checked.custom-radio + label:before {
+    background-color: white;
+    box-sizing: border-box;
+    border: 5px solid #c1a129;
+    padding: 4px;
+  }
+
+  input.demadridadestino{
+    min-height: 3.25rem;
+    width: 70%;
+  }
+
+  input.buscar{
+    min-height: 3.25rem;
+    width: 20%;
+    }
+
+
+
+  
+.diver {
+    width: auto;
+    height: 360px;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    animation-name: diver;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes diver {
+    0%, 33% {background-image:url(../img/slider1.jpg);}
+    33%, 66% {background-image:url(../img/slider2.jpg);}
+    66%, 100% {background-image:url(../img/slider3.jpg);}
+    100%, 0% {background-image: url(../img/slider1.jpg);}
+   
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    color:white;
+}
+
+
+.filtro{
+    filter:brightness(0.7);
+    
+}
+
+.texto-contenedor{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+}
+
+.texto-contenedor2{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: .875rem;
+}
+
+article{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 100%;
+}
+
+.fa-laptop, .fa-clock, .fa-clipboard, .fa-map-marked-alt, .fa-plane-departure{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    color: #073590;
+}
+
+
+.transicionfigure {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    padding-bottom: 2rem;
+}
+
+.transicionfigcap {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+  
+    padding-left: 5rem;
+    padding-right: 4rem;
+    
+    padding-bottom: 7rem;
+    text-align: center;
+    top: 75%;
+    transition: 0.5s ease;
+    color: #073590;
+    
+    
+}
+
+.transicionfigcap a{
+    font-size: .875rem;
+    padding-top: 1rem;
+    
+}
+
+.transicionfigure:hover .transicionfigcap {
+    top: 54%;
+}
+
+.fa-car-alt, .fa-leaf, .fa-percentage, .fa-umbrella-beach{
+    color: #073590;
+    padding-bottom: 10px;
+    margin-top: -10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+
+   
+}
+
+section.exploraryanair h2{
+    text-align: center;
+    font-size: 1rem;
+    color: #073590;
+}
+
+.exploraryanair{
+    margin-bottom: 5rem;
+}
+
+.vuelos {
+ 
+    padding: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+.vuelos {
+    cursor: pointer;
+}
+
+.linea {
+    background-color: yellow;
+    height: 5px;
+    width: 25%;
+    margin: 0 auto;
+    transition: 0.3s ease;
+    margin-top: 1rem;
+}
+
+.vuelos:hover .linea {
+    width: 50%;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+h1{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+   
+    color: #073590;
+}
+
+footer p a{
+    color: rgb(41, 46, 110);
+    text-decoration: underline;
+}
+
+footer h3{
+    font-weight: 700;
+    color: #2e2e2e;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+footer .fa-info-circle {
+    color: var(--light-grey,#c3c7cc)
+}
+
+footer .fa-plane{
+    color: var(--light-grey,#c3c7cc) 
+}
+
+footer li{
+    font-size: .875rem;
+    margin-bottom: 0.5rem;
+    color: #6c7079;
+}
+
+footer a{
+    font-size: .875rem;
+    margin-bottom: 0.5rem;
+    color: #6c7079;
+}
+
+footer section{
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+span{
+    size: 32px!important;
+    width: 32px!important;
+    height: 32px!important;
+    
+
+}
+
+.googleplay, .appstore{
+    width: 70%;
+    height: 70%;
+}
+
+.cookies{
+    padding-top: 3rem;
+    font-size: .75rem;
+    margin: 2rem;
+    margin-right: 3rem;
+}
+
+.terminos{
+    color: #1460b4;
+    text-decoration: underline;
+}
